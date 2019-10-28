@@ -1,0 +1,20 @@
+.face01hed{
+    border: solid #a0f307;
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.newfile{
+    font-size: 35px;
+}
+.failname{
+    font-size: 24px;
+    vertical-align : middle;
+}
+.simekiri{
+    font-size: 24px;
+}
+.facetb{
+    border: solid #f30707;
+    font-size: 24px;
+}

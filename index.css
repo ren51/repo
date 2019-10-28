@@ -1,0 +1,75 @@
+.oya01{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	justify-content: center;
+	border: solid ;
+}
+.tex{
+	font-size: 48px;
+	vertical-align: middle;
+}
+.chi01{
+	border: solid #008080;
+}
+.chi02{
+	border: solid #800015;
+	flex-grow: 5;
+	text-align: center;
+	font-size: 48px;
+}
+.chi03{
+	border: solid #a0f307;
+}
+h1{
+    color:green;
+}
+#kadaimei{
+
+    color:blue;
+}
+.shu{
+	border: solid #00801c;
+	font-size: 40px;
+	text-align: center;
+
+}
+.shu input{
+	vertical-align : middle;	
+}
+.chou{
+	font-size: 40px;
+	vertical-align: middle;
+}
+.kon{
+	border: solid #00801c;
+	font-size: 40px;
+	vertical-align: middle;
+}
+.konkyo-txt{
+	font-size: 40px;
+	vertical-align: middle;
+}
+.toi{
+	border: solid #a0f307;
+}
+.toitoi{
+	font-size: 40px;
+	vertical-align: middle;
+}
+.ans{
+	border: solid #a19894;
+}
+.ansans{
+	font-size: 40px;
+	vertical-align: middle;
+}
+.number{
+	font-size: 40px;
+	vertical-align: middle;
+}
+.toians{
+	font-size: 40px;
+	border: solid #ff19ec;
+}
