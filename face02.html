@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html　lang="ja">
-   <head>
-        <meta charset="UTF-8">
-         <link rel="stylesheet" type="text/css" href="face01.css">
-         <title>2ページ目</title>
-   </head> 
-   <body>
-       <header>
-           <div class="face01hed">
-               アウトライン作成アウトラインツール
-           </div>
-        </header>
-        教科名
-   </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="face02.js"></script>
+    <script src="nylon.js"></script>
+    <link rel="stylesheet" type="text/css" href="face02.css">
+
+    <script>
+        
+        window.addEventListener('load', () => {
+            report = [];// 全部のデータを入れておく変数
+            let repo = new References();
+            repo.set_sankou( document.querySelector('#san_hontai'), 0 );
+            //repo.set_qanda( document.querySelector('#qa_hontai'), 0 );
+        });
+    </script>
+
+    <title>参考文献ページ</title>
+</head>
+
+<body>
+    <header>
+        <div class="face02hed">
+            アウトライン作成アウトラインツール
+        </div>
+    </header>
+
+    <div class="taitol">参考文献の表示</div>
+    <p></p>
+
+    <button class="modru" type="button"
+        onclick="location.href='///Users/miuraren/Desktop/%E3%82%BB%E3%82%99%E3%83%9F/repo/index.html'">戻る
+    </button>
+<p></p>
+    <!--ここから新しい-->
+    <button id="san_start" class="sanst">参考文献の追加</button>
+    <div id="san_hontai"></div>
+
+    <template id="temp3">
+
+        <li class="ss">
+            <input type="text" name="sansan" class="textS">
+            <button class="delete3">消す</button>
+        </li>
+
+    </template>
+</body>
+
 </html>

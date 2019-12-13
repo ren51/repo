@@ -1,8 +1,14 @@
 .face01hed{
-    border: solid #a0f307;
     font-size: 40px;
     text-align: center;
     padding-bottom: 50px;
+    padding: 0.2em 0.5em;
+    background: -webkit-linear-gradient(to right, rgb(111, 157, 255), #94f3ff);
+    background: linear-gradient(to right, rgb(111, 157, 255), #94f3ff);
+    color: white;
+    font-weight: lighter;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.56);
+    margin: 0px 20px 100px 20px;
 }
 .newfile{
     font-size: 35px;
@@ -18,3 +24,44 @@
     border: solid #f30707;
     font-size: 24px;
 }
+.hoge{
+    font-size: 30px;
+}
+.text{
+    font-size: 30px;
+}
+.file{
+    font-size: 24px;
+}
+.ok{
+    font-size: 30px;
+}
+.sinbtn{
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+    font-size: 24px
+}
+.sinbtn:hover {
+    background: #67c5ff;
+    color: white;
+  }
+.hed{
+    margin: 0px 20px 100px 20px;
+}
+.repo{
+    vertical-align: middle;
+	position: relative;
+}
+.repo::after{
+    content: "";
+	display: block;
+	height: 4px;
+	background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+	background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+}
+

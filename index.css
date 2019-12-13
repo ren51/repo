@@ -4,36 +4,53 @@
 	-webkit-flex-direction: row;
 	flex-direction: row;
 	justify-content: center;
-	border: solid ;
 }
+.hed{
+	position: relative;
+	padding: 0.25em 0;
+}
+.hed:after{
+	content: "";
+	display: block;
+	height: 4px;
+	background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+	background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+}
+.lab{
+	position: relative;
+	padding: 0.25em 0;
+}
+.lab:after{
+	content: "";
+	display: block;
+	height: 4px;
+	background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+	background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+}
+
 .tex{
 	font-size: 48px;
 	vertical-align: middle;
 }
-.chi01{
-	border: solid #008080;
-}
+
 .chi02{
-	border: solid #800015;
+	/*border: solid #800015;*/
 	flex-grow: 5;
 	text-align: center;
 	font-size: 48px;
 }
-.chi03{
-	border: solid #a0f307;
-}
-h1{
-    color:green;
-}
-#kadaimei{
-
-    color:blue;
-}
 .shu{
-	border: solid #00801c;
 	font-size: 40px;
 	text-align: center;
-
+	position: relative;
+	padding: 0.25em 0;
+}
+.shu::after{
+	content: "";
+	display: block;
+	height: 4px;
+	background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+	background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
 }
 .shu input{
 	vertical-align : middle;	
@@ -42,25 +59,51 @@ h1{
 	font-size: 40px;
 	vertical-align: middle;
 }
+.ul{
+	text-align: center;
+	font-size: 24px;
+}
 .kon{
-	border: solid #00801c;
 	font-size: 40px;
 	vertical-align: middle;
+	position: relative;
+	
 }
-.konkyo-txt{
+.kon:after{
+	content: "";
+	display: block;
+	height: 4px;
+	background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+	background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+}
+.konkon{
+	font-size: 40px;
+	vertical-align: middle;
+	position: relative;
+	padding: 0.25em 0;
+}
+.kt{
 	font-size: 40px;
 	vertical-align: middle;
 }
 .toi{
-	border: solid #a0f307;
+	position: relative;
+	padding: 0.25em 0;
+}
+.toi:after{
+	content: "";
+	display: block;
+	height: 4px;
+	background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+	background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
 }
 .toitoi{
 	font-size: 40px;
 	vertical-align: middle;
 }
-.ans{
+/*.ans{
 	border: solid #a19894;
-}
+}*/
 .ansans{
 	font-size: 40px;
 	vertical-align: middle;
@@ -71,5 +114,73 @@ h1{
 }
 .toians{
 	font-size: 40px;
-	border: solid #ff19ec;
+	
+}
+.sankou{
+	
+	font-size: 40px;
+	
+}
+.uemoto{
+	font-size: 40px;
+}
+.btn{
+	font-size: 40px;
+}
+/*こんきょ*/
+.kon_st{
+	font-size: 20px;
+}
+.kon_hon{
+	font-size: 20px;
+
+}
+.kon_hon::after{
+	content: "";
+	display: block;
+	height: 4px;
+	background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+	background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+}
+.kk{
+	font-size: 20px;
+	padding: 3.0px 0
+}
+.textK{
+	font-size: 20px;
+}
+.delete2{
+	font-size: 20px;
+}
+/**/
+/*tioans*/
+.qa{
+	vertical-align: middle;
+	position: relative;
+}
+.qa:after{
+	content: "";
+	display: block;
+	height: 4px;
+	background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+	background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+}
+.textQ{
+	font-size: 20px;
+	padding: 1.0px 0;
+	margin: 2px 0px;
+}
+.textA{
+	font-size: 20px;
+	padding: 1.0px 0;
+}
+.toisuta{
+	font-size: 20px;
+	margin: 5px 0px;
+}
+.delete{
+	font-size: 20px;
+}
+.change{
+	font-size: 20px;
 }

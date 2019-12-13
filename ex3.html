@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex3</title>
+    <script>
+        var moji = ["a", "b", "c"];
+        //console.log(moji);
+        var moji2 = moji.reverse();
+        //console.log(moji2);
+
+
+        window.addEventListener('load', () => {
+            report = [];// 全部のデータを入れておく変数
+            let repo = new Report();
+            //repo.set_konkyo(document.querySelector('#kon_hontai'), 0);
+            repo.set_qanda(document.querySelector('#qa_hontai'), 0);
+        });
+
+
+
+        ///別の処理
+        var arry = [1, 2, 3, 4];
+        var index;
+        index = 2;
+        arry.splice(index - 1, 2, arry[index], arry[index - 1]);
+       // console.log(arry);
+
+        class Report {
+            constructor() {
+                //グローバル変数は　ex2.html にある
+                // テストデータの仮代入
+                report[0] = {};
+                report[0].qanda = [];
+                report[0].konkyo = [];
+
+                // テストデータの細かい部分を仮代入
+                let qa = report[0].qanda;
+                let k = report[0].konkyo;
+                qa.push({ q: "001", a: "構わん" });
+                qa.push({ q: "002", a: "あぁ" });
+                qa.push({ q: '003', a: 'まだまだ' });
+                k.push({ k: 'k001' });
+                k.push({ k: 'k002' });
+
+                // console.log(report[0].qanda);
+                //  console.log(qa[0]);
+                //  console.log(qa[1]);
+                //  console.log(qa[2]);
+                // let box = qa[0];
+                // //console.log(box);
+                // qa[0]=qa[1];
+                // qa[1]= box;
+                // console.log(qa);
+
+            }
+
+            //入れ替えの処理
+            replace( qanda, id1, id2 ,element, num) {
+                let change = qanda[ id2 ];
+                qanda[ id2 ] = qanda[ id1 ];
+                qanda[ id1 ] = change;
+                //消す 
+                let replece = document.querySelector('#qa_hontai');
+                let rebox = replece;
+                 replece.parentNode.removeChild(replece);
+
+                //再描画(redraw)   
+            }
+
+
+            set_qanda(element, num) {
+                document.querySelector('#start').addEventListener('click', () => {
+                    let nl = new nylon();
+                    let temp = document.querySelector('#temp1').content;
+
+                    for (let number in report[num].qanda) {
+                        let item = report[num].qanda[number];
+                        let content = temp.cloneNode(true);
+                        // 問と答えを入れておく
+                        content.querySelector('.textQ').value = item.q;
+                        content.querySelector('.textA').value = item.a;
+                        content.querySelector('.qa').setAttribute('id', 'qa' + number);
+                        //console.log('id', 'qa' + number);
+                        
+                        
+                        //移動ボタン(上)
+                        content.querySelector('.change').addEventListener('click', (ev1) => {
+                            let chid = ev1.srcElement.parentNode.getAttribute('id');
+                            let number = chid.slice(2);
+                             console.log(report[num].qanda[number]);//確認用
+                             this.replace( report[num].qanda, number, number-1 );
+                             console.log(report[num].qanda[number]);//確認用
+                             
+                        })
+                            
+                        // 削除ボタン
+                        content.querySelector('.delete').addEventListener('click', (ev) => {
+                            //console.log(ev.srcElement.parentNode);
+                            let id = ev.srcElement.parentNode.getAttribute('id');
+                            //console.log(id);
+                            let number = id.slice(2);
+                            report[num].qanda.splice(number, 1);
+                            ev.srcElement.parentNode.parentNode.removeChild(ev.srcElement.parentNode);
+                            console.log(number);
+                        })
+
+                        //document.querySelector('#qa_hontai').appendChild( content );
+                        element.appendChild(content);
+                        //console.log(content);
+                    }
+                });
+            }
+            
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <button id="start">開くよ</button>
+    <div id="qa_hontai"></div>
+
+    <template id="temp1">
+        <div class="qa">
+            <input type="text" name="dummy" class="textQ">
+            <textarea name="dummy2" cols="30" rows="10" class="textA">もげもげ</textarea>
+            <button class="delete">消す</button>
+            <button class="change">チェンジ上</button>
+           
+        </div>
+    </template>
+</body>
+
+</html>

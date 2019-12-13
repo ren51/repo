@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ex2.js"></script>
+    <title>change</title>
+    <script>
+       
+        
+        window.addEventListener('load', () => {
+            report = [];// 全部のデータを入れておく変数
+            let repo = new Report();
+            repo.set_konkyo( document.querySelector('#kon_hontai'), 0 );
+            repo.set_qanda( document.querySelector('#qa_hontai'), 0 );
+        });
+
+    </script>
+</head>
+<body>
+    <!--根拠の部分-->
+    <button id="kon_start">開かんかい</button>
+    <div id="kon_hontai"></div>
+
+    <template id="temp0">
+        
+            <li class="kk"> 
+                <input type="text" name="konkon" class="textK">
+                <button class="delete2">消す</button>
+            </li>
+        
+       
+        
+    </template>
+   
+
+
+
+ <!--問と答えの部分-->
+    <button id="start">開くよ</button>
+    <div id="qa_hontai"></div>
+    <template id="temp1">
+        <div class="qa">
+            <input type="text" name="dummy" class="textQ">
+            <textarea name="dummy2" cols="30" rows="10" class="textA">もげもげ</textarea>
+            <button class="delete">消す</button>
+            <button class="moveup">上</button>
+            <button class="modedown">下</button>
+    </template>
+
+
+</body>
+</html>

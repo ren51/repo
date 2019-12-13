@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ex2.js"></script>
+    <script src="nylon.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Document</title>
+
+    <script>
+        
+        window.addEventListener('load', () => {
+            report = [];// 全部のデータを入れておく変数
+            let repo = new Report();
+            repo.set_konkyo( document.querySelector('#kon_hontai'), 0 );
+            repo.set_qanda( document.querySelector('#qa_hontai'), 0 );
+        });
+
+    </script>
+</head>
+<body>
+    <header class="hed">
+        <div class="oya01">
+            <!-- <div class="chi01">
+                <h2>メニュー</h2>
+            </div> -->
+            <div class="chi02"><label for="kadai">課題名：<textarea class="tex" cols="20" rows="1">ポケモン</textarea></label>
+            </div>
+            <div class="chi03">
+                <a class="sankou" href="///Users/miuraren/Desktop/%E3%82%BB%E3%82%99%E3%83%9F/repo/face02.html"
+                    style="text-decoration: none">参考文献</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!--主張の部分-->
+    <p></p>
+    <div class="shu">
+        <form>
+            <label>主張</label>
+            <input class="chou" type="text" name="namae">
+        </form>
+    </div>
+    
+
+    <!--根拠の部分-->
+    <button id="kon_start" class="kon_st">根拠の追加</button>
+    <div id="kon_hontai" class="kon_hon"></div>
+
+    <template id="temp0">
+        
+            <li class="kk"> 
+                <input type="text" name="konkon" class="textK">
+                <button class="delete2" >消す</button>
+            </li>
+        
+    </template>
+   
+ <!--問と答えの部分-->
+    <button id="start" class="toisuta">問と答えの追加</button>
+    <div id="qa_hontai"></div>
+    <template id="temp1">
+        <div class="qa">
+            <input type="text" name="dummy" class="textQ">
+            <br>
+            <textarea name="dummy2" cols="30" rows="10" class="textA">もげもげ</textarea>
+            <button class="delete">消す</button>
+            <button class="change">上と入れ替える</button>
+
+        </div>
+    </template>
+
+
+</body>
+</html>

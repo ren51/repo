@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load', () => {
+            report = [];
+            report[0] = {}; // 今回いじるやつ
+            report[0].konkyo = [];
+            let = k = report[0].konkyo;
+            k.push( { q: "ほんとうによいか？", a: "構わん"} );
+            k.push( { q: "まじで？", a: "あぁ"} );
+            k.push( { q: ':||はいつ？', a: 'まだまだ'});
+
+            document.querySelector('#start').addEventListener('click', () => {
+                let temp = document.querySelector('#temp1').content;
+                
+                for( item of report[0].konkyo ) {
+                    let content = temp.cloneNode(true);
+                    content.querySelector('.textQ').value = item.q;
+                    content.querySelector('.textA').value = item.a;
+                    document.querySelector('#konkyo_hontai').appendChild( content );
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="start">開くよ</button>
+    <div id="konkyo_hontai"></div>
+    <template id="temp1">
+        <div class="konkyo">
+            <input type="text" name="dummy" class="textQ">
+            <textarea name="dummy2" cols="30" rows="10" class="textA">もげもげ</textarea>
+            <button id="delete">消す</button>
+        </div>
+    </template>
+</body>
+</html>
