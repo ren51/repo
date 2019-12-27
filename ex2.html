@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="ex2.js"></script>
     <script src="nylon.js"></script>
-    <script src="index.js"></script>
+    <script src="page.js"></script>
     <link rel="stylesheet" type="text/css" href="index.css">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="face01.css">
+    <title>ex2</title>
 
-    <script>
+    <!-- <script>
         
         window.addEventListener('load', () => {
             report = [];// 全部のデータを入れておく変数
@@ -18,10 +20,17 @@
             repo.set_qanda( document.querySelector('#qa_hontai'), 0 );
         });
 
-    </script>
+    </script> -->
 </head>
+
 <body>
     <header class="hed">
+        <div class="face01hed">
+            アウトライン作成アウトラインツール
+        </div>
+    </header>
+
+    <div class="hed2">
         <div class="oya01">
             <!-- <div class="chi01">
                 <h2>メニュー</h2>
@@ -33,8 +42,9 @@
                     style="text-decoration: none">参考文献</a>
             </div>
         </div>
-    </header>
-
+    </div>
+        
+   
 
     <!--主張の部分-->
     <p></p>
@@ -44,24 +54,31 @@
             <input class="chou" type="text" name="namae">
         </form>
     </div>
-    
+
 
     <!--根拠の部分-->
-    <button id="kon_start" class="kon_st">根拠の追加</button>
+    <button id="b_kon" class="kon_st">根拠の追加</button>
     <div id="kon_hontai" class="kon_hon"></div>
 
     <template id="temp0">
-        
-            <li class="kk"> 
-                <input type="text" name="konkon" class="textK">
-                <button class="delete2" >消す</button>
-            </li>
-        
+
+        <li class="kk">
+            <input type="text" name="konkon" class="textK">
+            <button class="delete2">消す</button>
+        </li>
+
     </template>
-   
- <!--問と答えの部分-->
-    <button id="start" class="toisuta">問と答えの追加</button>
+
+    <!--問と答えの部分-->
+    <button id="b_qanda">Q&A</button>
     <div id="qa_hontai"></div>
+    <template id="temp1_noup">
+        <div class="qa">
+            <input type="text" name="dummy" class="textQ">
+            <textarea name="dummy2" cols="30" rows="10" class="textA">もげもげ</textarea>
+            <button class="delete">消す</button>
+        </div>
+    </template>
     <template id="temp1">
         <div class="qa">
             <input type="text" name="dummy" class="textQ">
@@ -75,4 +92,5 @@
 
 
 </body>
+
 </html>

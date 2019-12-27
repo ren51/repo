@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex4</title>
+  <script src="nylon.js"></script>
+  <script src="page.js"></script>
+  <script src="ex4.js"></script>
+</head>
+
+<body>
+  <div class="memoApp">
+    <div class="memoForm">
+      <input type="text" name="mydata_in" id="title" class="form-control" placeholder="タイトル" />
+      <textarea class="form-control" rows="3" placeholder="本文" id="body"></textarea>
+      <button type="button" class="btn btn-primary btn-block" id="btnlod">ロード</button>
+      <button type="button" class="btn btn-primary btn-block" id="btnAdd">セーブ</button>
+    </div>
+
+    <div id="memoArea">
+    </div>
+
+    <button type="button" class="btn btn-primary btn-block" id="btnReset">リセット</button>
+  </div>
+
+
+
+  <template id="temp0">
+    <input type="text" id="title" class="form-control" readonly="readonly" value="%s" />
+    <textarea class="form-control" rows="3" id="body" readonly="readonly">%s</textarea>
+  </template>
+
+
+</body>
+
+</html>

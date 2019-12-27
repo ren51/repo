@@ -9,7 +9,20 @@
 	position: relative;
 	padding: 0.25em 0;
 }
+
 .hed:after{
+	content: "";
+	display: block;
+	height: 4px;
+	background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+	background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+}
+.hed2{
+	position: relative;
+	padding: 0.25em 0;
+}
+
+.hed2:after{
 	content: "";
 	display: block;
 	height: 4px;
