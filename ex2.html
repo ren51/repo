@@ -9,7 +9,7 @@
     <script src="page.js"></script>
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="face01.css">
-    <title>ex2</title>
+    <title>アウトラインプ作成ツール</title>
 
     <!-- <script>
         
@@ -35,16 +35,12 @@
             <!-- <div class="chi01">
                 <h2>メニュー</h2>
             </div> -->
-            <div class="chi02"><label for="kadai">課題名：<textarea class="tex" cols="20" rows="1">ポケモン</textarea></label>
-            </div>
-            <div class="chi03">
-                <a class="sankou" href="///Users/miuraren/Desktop/%E3%82%BB%E3%82%99%E3%83%9F/repo/face02.html"
-                    style="text-decoration: none">参考文献</a>
+            <div class="chi02"><label for="kadai">課題名：<textarea class="tex" cols="20" rows="1">課題名の記入</textarea></label>
             </div>
         </div>
     </div>
-        
-   
+
+
 
     <!--主張の部分-->
     <p></p>
@@ -70,7 +66,7 @@
     </template>
 
     <!--問と答えの部分-->
-    <button id="b_qanda">Q&A</button>
+    <button id="b_qanda">問と答え</button>
     <div id="qa_hontai"></div>
     <template id="temp1_noup">
         <div class="qa">
@@ -88,6 +84,18 @@
             <button class="change">上と入れ替える</button>
 
         </div>
+    </template>
+
+<!--参考文献-->
+    <button id="san_start" class="sanst">参考文献の追加</button>
+    <div id="san_hontai"></div>
+
+    <template id="ss">
+
+        <li class="ss">
+            <input type="text" name="sansan" class="textS">
+            <button class="delete3">消す</button>
+        </li>
     </template>
 
 
