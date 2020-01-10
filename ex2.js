@@ -6,6 +6,7 @@ window.addEventListener('load', () => {
     let pageUI = new PageUI();
     //let remaid = new remaid(repo);
     repo.set_konkyo(document.querySelector('#kon_hontai'), 0);
+    repo.set_sankou( document.querySelector('#san_hontai'), 0 );
 });
 class ReportUI {
     /**
@@ -165,15 +166,19 @@ class Report {
         this.report[0] = {};
         this.report[0].qanda = [];
         this.report[0].konkyo = [];
+        this.report[0].sankou = [];
 
         // テストデータの細かい部分を仮代入
         let qa = this.report[0].qanda;
         let k = this.report[0].konkyo;
+        let r = this.report[0].sankou;
         qa.push({ q: "ほんとうによいか？", a: "構わん" });
         qa.push({ q: "まじで？", a: "あぁ" });
         qa.push({ q: ':||はいつ？', a: 'まだまだ' });
         k.push({ k: '力也さん遅刻' });
         k.push({ k: '結婚ラシュ！' });
+        r.push({ r: '参考文献のURLなどを記入' });
+        r.push({ r: '参考文献のURLなどを記入' });
     }
 //根拠の表示
     set_konkyo( element, num ) {
@@ -205,6 +210,39 @@ class Report {
                 element.appendChild( content );
             }
            
+
+        });
+    }
+//参考文献の表示
+    set_sankou(element, num) {
+        document.querySelector('#san_start').addEventListener('click', () => {
+            let temp = document.querySelector('#temp3').content;
+
+            for (let number in this.report[num].sankou) {
+                let item = this.report[num].sankou[number];
+                let content = temp.cloneNode(true);
+
+                //根拠を入れておく
+                content.querySelector('.textS').value = item.r;
+                content.querySelector('.ss').setAttribute('id', 'ss' + number);
+                console.log('id', 'ss' + number);
+
+
+
+                //削除ボタン
+                content.querySelector('.delete3').addEventListener('click', (ev2) => {
+                    console.log(ev2.srcElement.parentNode);
+                    let id2 = ev2.srcElement.parentNode.getAttribute('id');
+                    console.log(id2);
+                    let number2 = id2.slice(2);
+                    report[num].sankou.splice(number2, 1);
+                    ev2.srcElement.parentNode.parentNode.removeChild(ev2.srcElement.parentNode);
+                    console.log(number2);
+                })
+                //document.querySelector('#kon_hontai').appendChild( content );
+                element.appendChild(content);
+            }
+
 
         });
     }

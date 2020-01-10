@@ -6,6 +6,7 @@ window.addEventListener('load', () => {
     let pageUI = new PageUI();
     //let remaid = new remaid(repo);
     //repo.set_konkyo(document.querySelector('#kon_hontai'), 0);
+
 });
 class ReportUI {
     /**
@@ -24,9 +25,7 @@ class ReportUI {
         nl.on('page', (key, value) => {
             this.set_qanda();
         })
-
     }
-
     /**
      * 描述
      * @date 2019-12-13
@@ -49,12 +48,12 @@ class ReportUI {
      * @param {number} num  レポート番号    ex: 0
      * @returns {any}
      */
+
     set_qanda() {
         var report = this.report.report;
         var num = this.number;
         let temp_noup = document.querySelector('#temp1_noup').content;
         let temp_up = document.querySelector('#temp1').content;
-        //console.log(57, temp);
         for (let number in report[num]["qanda"]) {
             var temp;
             if( number == 0 ) temp=temp_noup;
@@ -66,8 +65,6 @@ class ReportUI {
             content.querySelector('.textA').value = item.a;
             content.querySelector('.qa').setAttribute('id', 'qa' + number);
             console.log(item);
-
-
 
 
             //移動ボタン(上)
@@ -89,7 +86,6 @@ class ReportUI {
                 console.log( 85, content.querySelector('.change') );
                 //content.removeChild( content.querySelector('.change') );
             }
-
             // 削除ボタン
             content.querySelector('.delete').addEventListener('click', (ev) => {
                 //console.log(ev.srcElement.parentNode);
@@ -101,15 +97,10 @@ class ReportUI {
                 console.log(number);
             })
 
-
             //document.querySelector('#qa_hontai').appendChild( content );
             this.parent.appendChild(content);
             //console.log(content);
         }
-        // //document.querySelector('.save').addEventListener('click', () => {
-        //     localStorage.setItem('reminder', JSON.stringify(report[num].qanda));
-        // })
-
 
     }
     save_qa() {
@@ -129,8 +120,6 @@ class ReportUI {
         console.log(131, this.report.report[num].qanda);
         //localStorage.setItem('reminder', JSON.stringify(this.report.report[num].qanda));
     }
-    
-
 }
 
 class Report {
@@ -142,6 +131,7 @@ class Report {
         this.report[0].qanda = [];
         this.report[0].konkyo = [];
 
+
         // テストデータの細かい部分を仮代入
         let qa = this.report[0].qanda;
         let k = this.report[0].konkyo;
@@ -150,10 +140,11 @@ class Report {
         qa.push({ q: "01", a: "anser" });
         qa.push({ q: "02", a: "anser" });
         qa.push({ q: "03", a: "anser" });
-        console.log(157,qa);
-        // var data = JSON.parse(localStorage.getItem('reminder')) || qa;
-        // this.data = data;
+
+
+
     }
+    
     set_data() {
         document.querySelector('.save').addEventListener('click', () => {
              localStorage.setItem('reminder', JSON.stringify(qa));

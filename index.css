@@ -92,7 +92,6 @@
 .konkon{
 	font-size: 40px;
 	vertical-align: middle;
-	position: relative;
 	padding: 0.25em 0;
 }
 .kt{
@@ -141,12 +140,21 @@
 	font-size: 40px;
 }
 /*こんきょ*/
+.kon_st_div{
+	width: 300px;
+	margin: auto;
+	position: relative;
+	padding-bottom: 50px;
+}
 .kon_st{
 	font-size: 20px;
+	position: absolute;
+	left: 450px;
+	
 }
 .kon_hon{
 	font-size: 20px;
-
+	text-align:center;
 }
 .kon_hon::after{
 	content: "";
@@ -156,20 +164,35 @@
 	background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
 }
 .kk{
-	font-size: 20px;
-	padding: 3.0px 0
+	
+	font-size: 40px;
+	padding: 3.0px 0;
 }
 .textK{
-	font-size: 20px;
+	font-size: 40px;
 }
 .delete2{
 	font-size: 20px;
 }
 /**/
-/*tioans*/
+/*toioans*/
+.panda_div{
+	width: 300px;
+	margin: auto;
+	margin-top: 10px;
+	position: relative;
+	padding-bottom: 50px;
+}
+.btnpanda{
+	font-size: 20px;
+	position: absolute;
+	left: 450px;
+}
 .qa{
 	vertical-align: middle;
 	position: relative;
+	text-align:center;
+	margin: 10px;
 }
 .qa:after{
 	content: "";
@@ -193,7 +216,54 @@
 }
 .delete{
 	font-size: 20px;
+	
 }
 .change{
+	font-size: 20px;
+	
+}
+.qa_hontai{
+	font-size: 20px;
+}
+.qa_hontai::after{
+	content: "";
+	display: block;
+	height: 4px;
+	background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+	background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+}
+/**sannkoubunnkenn*/
+.sanst_div{
+	width: 300px;
+	margin: auto;
+	margin-top: 10px;
+	position: relative;
+	padding-bottom: 50px;
+}
+.sanst{
+	font-size: 20px;
+	position: absolute;
+	left: 450px;
+}
+.san_hon{
+	font-size: 20px;
+	text-align:center;
+}
+.san_hon::after{
+	content: "";
+	display: block;
+	height: 4px;
+	background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+	background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+}
+.ss{
+
+	font-size: 40px;
+}
+.textS{
+	font-size: 40px;
+	width: 60%;
+}
+.delete3{
 	font-size: 20px;
 }

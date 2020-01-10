@@ -7,6 +7,7 @@
     <script src="ex2.js"></script>
     <script src="nylon.js"></script>
     <script src="page.js"></script>
+    <script src="face02.js"></script>
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="face01.css">
     <title>アウトラインプ作成ツール</title>
@@ -53,7 +54,10 @@
 
 
     <!--根拠の部分-->
-    <button id="b_kon" class="kon_st">根拠の追加</button>
+    <div class="kon_st_div">
+        <button id="b_kon" class="kon_st">根拠の表示</button>
+    </div>
+    
     <div id="kon_hontai" class="kon_hon"></div>
 
     <template id="temp0">
@@ -66,34 +70,40 @@
     </template>
 
     <!--問と答えの部分-->
-    <button id="b_qanda">問と答え</button>
-    <div id="qa_hontai"></div>
+    <div class="panda_div">
+        <button id="b_qanda" class="btnpanda">問と答え</button>
+    </div>
+    
+    <div id="qa_hontai" class="qa_hontai"></div>
+
     <template id="temp1_noup">
         <div class="qa">
-            <input type="text" name="dummy" class="textQ">
-            <textarea name="dummy2" cols="30" rows="10" class="textA">もげもげ</textarea>
-            <button class="delete">消す</button>
+            <input type="text" name="dummy" class="textQ"> <button class="delete">消す</button>
+            <br>
+            <textarea name="dummy2" cols="50" rows="10" class="textA">もげもげ</textarea>
+            
         </div>
     </template>
     <template id="temp1">
         <div class="qa">
-            <input type="text" name="dummy" class="textQ">
-            <br>
-            <textarea name="dummy2" cols="30" rows="10" class="textA">もげもげ</textarea>
-            <button class="delete">消す</button>
-            <button class="change">上と入れ替える</button>
+            <input type="text" name="dummy" class="textQ"> <button class="delete">消す</button> <button class="change">上と入れ替える</button>
 
+            <br>
+            <textarea name="dummy2" cols="50" rows="10" class="textA">もげもげ</textarea>
         </div>
     </template>
 
 <!--参考文献-->
+<div class="sanst_div">
     <button id="san_start" class="sanst">参考文献の追加</button>
-    <div id="san_hontai"></div>
+</div>
+    
+    <div id="san_hontai" class="san_hon"></div>
 
-    <template id="ss">
+    <template id="temp3">
 
         <li class="ss">
-            <input type="text" name="sansan" class="textS">
+            <input type="text" name="sansan" class="textS" >
             <button class="delete3">消す</button>
         </li>
     </template>
